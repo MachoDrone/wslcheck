@@ -4,8 +4,8 @@
 echo ""
 
 # Ask about VPN (for screenshot purposes)
-read -p "Are you on a VPN? ( y / n ): " vpn_response
-echo -e "\e[32mVPN response:\e[0m $vpn_response"
+#read -p "Are you on a VPN? ( y / n ): " vpn_response
+#echo -e "\e[32mVPN response:\e[0m $vpn_response"
 
 # Check WSL2 version, with null byte removal to avoid warnings
 wsl_output=$(/mnt/c/Windows/System32/wsl.exe --version 2>/dev/null | tr -d '\000')
@@ -122,3 +122,4 @@ if [ -f "/mnt/c/Users/$windows_username/.wslconfig" ]; then
 else
   echo "File not found"
 fi
+echo " " && echo "Are you using a VPN? ( y / n ):
